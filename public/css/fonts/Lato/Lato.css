@@ -1,0 +1,20 @@
+@font-face {
+			font-family: "LatoRegular";
+			src: url("LatoRegular.eot");
+			src: url("LatoRegular.eot?#iefix")format("embedded-opentype"),
+			url("LatoRegular.woff") format("woff"),
+			url("LatoRegular.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+}
+
+@font-face {
+			font-family: "LatoBold";
+			src: url("LatoBold.eot");
+			src: url("LatoBold.eot?#iefix")format("embedded-opentype"),
+			url("LatoBold.woff") format("woff"),
+			url("LatoBold.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+}
+

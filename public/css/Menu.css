@@ -1,0 +1,100 @@
+﻿/* Giving a background-color to the nav container. */
+nav {
+    margin: 10px 0;
+   /* background-color: #E64A19; */
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+    padding:0;
+    margin:0;
+    list-style: none;
+    position: relative;
+    }
+
+/* Positioning the navigation items inline */
+nav ul li {
+    margin: 0px -7px 0 0;
+    display:inline-block;
+   /* background-color: #E64A19; */
+    }
+
+/* Styling the links */
+nav a {
+    display:block;
+    padding:0 10px;
+    color:#FFF;
+    font-size:20px;
+   
+    text-decoration:none;
+	
+	height: 60px;
+	padding-top: 12px;
+    transition: .2s linear;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "LatoRegular";
+    font-weight: bold;
+    color: #222222;
+    background: #fefefe;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Background color change on Hover */
+nav a:hover {
+    background-color: #fefefe;
+	height: 60px;
+    padding-top: 12px;
+    transition: .2s linear;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "LatoRegular";
+    font-weight: bold;
+    color: #222222;
+    background: #fefefe;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+    display:inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    min-width:170px;
+    display:list-item;
+    position: relative;
+}
+
+/* Second, Third and more Tiers
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul {
+    position: absolute;
+    top:0;
+    left:100%;
+}
+
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+.menu-width{
+	position: absolute;
+	z-index: 1;
+}
+
+.menu-width ul:hover{
+background:#fefefe;
+}
