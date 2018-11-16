@@ -1,6 +1,4 @@
 <?php
-//namespace controllers;
-
   class _BaseController  {
      private $member; 		
      function __set($name,$val)	 {	     
