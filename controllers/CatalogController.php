@@ -5,9 +5,7 @@ class _CatalogController extends _BaseController
 	{	
 		if($_REQUEST['in-cart-product-id']) 
 		{
-			$cart=new models\CartModel;
 			$cart->addToCart($_REQUEST['in-cart-product-id']);
-			models\SmalCartModel::getInstance()->setCartData();
 			header('Location: /catalog');
 			exit;
 		}	
