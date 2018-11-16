@@ -1,7 +1,6 @@
 <?php
   class _MenuController 
   {
-	public $MenuItem = ["home"=>"/index", "Диваны и кресла"=>"/Sofa", "Шкафы"=>"/Closet", "Спальня"=>"/Bedroom", "Прихожая"=>"/Hall",  "Кухня"=>"/Kitchen", "Детская"=>"/Children", "Кабинет"=>"/Office", "Прочее"=>"/Other", "contact us"=>"/feedback"];     
 	protected static $instance; 
 	private function __construct() 
 	{		
