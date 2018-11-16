@@ -1,6 +1,4 @@
 <?php
-//namespace controllers;
-
 class _CatalogController extends _BaseController 
 {
     function __construct()	 
