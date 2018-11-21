@@ -947,6 +947,16 @@ a {
   margin-bottom: 50px;
 }
 
+.enterback{
+	padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.regno{
+	position: relative;
+    top: 350px;
+}
+
 @keyframes detailsfraime {
   from {
     opacity: 0;
@@ -1813,50 +1823,49 @@ select[size].broursw {
   margin: 16px;
 }
 .descrip-aboutp {
-  font-size: 14px;
-  color: #5e5e5e;
-  line-height: 1.714;
-  padding-top: 10px;
-  width: 60%;
-  margin: 0 auto;
+	font-size: 14px;
+    color: #5e5e5e;
+    line-height: 1.714;
+    padding-top: 10px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
 }
 .box-mater {
   display: flex;
-  justify-content: center;
 }
+
+.tablesecta {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .mater {
-  font-size: 14px;
-  font-family: "LatoRegular";
-  color:#2f2f2f;
-  font-weight: bold;
-  line-height: 1.714;
-  text-transform: uppercase; 
-  margin: 12px;
+    font-size: 14px;
+    font-family: "LatoRegular";
+    color: #2f2f2f;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 8px;
 }
+
 .mater span {
   color:  #817f7f;
   text-transform: none; 
 }
 .PricePD {
-	font-size: 24px;
+	font-size: 22px;
 	color: #4fc35d;
 	font-weight: bold;
-	padding-top: 10px;
-	/*! padding-bottom: 40px; */
-	/*! border-bottom: 2px solid #d4d4d4; */
-	width: 60%;
-	text-align: center;
-	margin: 0 auto;
 }
 .PricePD span{
-  color: #ce7272;
+  color: #817f7f;
 }
 .selected-aboutp {
   width: 144px;
   text-align: left;
 }
 .new-text{
-	width: 60%;
 	text-align: center;
 	margin: 0 auto;
 }
@@ -1904,13 +1913,14 @@ select[size].angleselect-shipping-cart {
 }
 .bottomcart {
   font-family: "LatoRegular";
-  color: #bab3b5;
+  color: #817f7f;
   font-weight: bold;
   line-height: 2.2;
-  border: 1px solid #bab3b5;
-  padding: 18px;
+  border: 1.5px solid #bab3b5;
+  padding: 10px;
   margin: 20px 20% 10px 20%;
   display: block;
+  font-size: 18px;
 }
 .bottomcart a {
   color: #bab3b5;
