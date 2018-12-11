@@ -6,8 +6,8 @@ $block = 'block';
 <h1  class="wrapper fixcart"  style="clear:left;">
 <a href="/catalog"><input type="button" class="my_acc" value="Назад в каталог"></a>
 </h1>
-	<div class="card_product"><div class="wrapper">	<div class="product_image ron product-item"><?php include($_SERVER['DOCUMENT_ROOT'].'/views/ratingView.php');?>
-		<image class="prod-imag widthscreen" src="/uploads/<?=$product['image_url']?>" alt="<?=$product['name']?>" title="<?=$product['name']?>" />
+	<div class="card_product"><div class="wrapper">	<div class="ron product-item"><?php include($_SERVER['DOCUMENT_ROOT'].'/views/ratingView.php');?>
+		<image class="widthscreen cartoon" src="/uploads/<?=$product['image_url']?>" alt="<?=$product['name']?>" title="<?=$product['name']?>" />
 	</div></div></div>				
 	<section class="pagepr wrapper">
 		<h4 class="top-aboutp"><?=$current_category["title"]?></h4>	
