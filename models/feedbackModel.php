@@ -31,14 +31,17 @@
 		{
 			$tfio = $this->fio;		
 			$to_user  = $this->email; 
-			$to_admin = 'Sofastore@mail.ru';
-			$subject = 'Сообщение с формы обратной связи';
-			$message = $this->message;
+			$to_admin = 'grand-sofa@mail.ru';
+			$subject = 'Сообщение с формы обратной связи grandsofa.ru';
+			$message = "<b>ФИО: </b>".$this->fio."</br>";
+			$message .= "<b>e-mail: </b>".$this->email."</br>";
+			$message .= "<b>Тема: </b>".$this->theme."</br>";
+			$message .= "<b>Сообщение: </b>".$this->message."</br>";
 			$headers  = 'MIME-Version: 1.0'."\r\n";
-			$headers .= 'Content-type: text/html;'."\r\n";
-			$headers .= 'From: Sofastore.ru'.$this->theme."\r\n";		
+			$headers .= 'Content-type: text/html; charset=utf-8'."\r\n";
+			$headers .= 'From: grandsofa.ru'.$this->theme."\r\n";		
 			$array=array("name"=>$this->fio, "email"=>$this->email,	"theme"=>$this->theme, "message"=>$this->message,);		
-			mail($tfio, $to_admin, $to_user, $subject, $message, $headers);	
+			mail($to_admin, $subject, $message, $headers);	
 			parent::build_query("INSERT INTO `feedback` SET",$array);	
 		}	
 } 
