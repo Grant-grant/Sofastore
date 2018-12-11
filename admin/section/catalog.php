@@ -7,7 +7,7 @@
 		$model->category_id=models_categoryModel::getInstance()->getCategoryList($category_id); 
 		$model->category_id[]=$category_id;
 		
-		$catalog=$model->getPageList($page);
+		$catalog=$model->getList($page,5);
 		$list_categories=models_categoryModel::getInstance()->getCategoryTitleList();
 		$array_categories=$model->category_id=models_categoryModel::getInstance()->getHierarchyCategory(0);	
 		
