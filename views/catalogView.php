@@ -4,8 +4,8 @@ $sdwn = 300;
 $sfuc = 50000;
 $n='none';
 ?>
-<h1 class="wrapper categoryname"><?=$TiteCategory?></h1>
-<div class="wrapper table-pr">Товары от <input class="widin" id="prsrn" type="text" name="specprice" value="<?=$sdwn?>" placeholder="<?=$sdwn?>"/>руб. до <input class="widin" id="prsra" type="text" name="specprice" value="<?=$sfuc?>" placeholder="<?=$sfuc?>"/>руб. <button class="my_acc2" id="filter">Искать</button><button class="my_acc2" id="filter2" style="display:none;">Обновить</button></div>
+<h1 class="categoryname"><?=$TiteCategory?></h1>
+<div class="table-pr">Товары от <input class="widin" id="prsrn" type="text" name="specprice" value="<?=$sdwn?>" placeholder="<?=$sdwn?>"/>руб. до <input class="widin" id="prsra" type="text" name="specprice" value="<?=$sfuc?>" placeholder="<?=$sfuc?>"/>руб. <button class="my_acc2" id="filter">Искать</button><button class="my_acc2" id="filter2" style="display:none;">Обновить</button></div>
 <?php 
 foreach($Items as $item)	{
 	$addcart2 = '/catalog?in-cart-product-id='.$item["id"];
@@ -14,7 +14,7 @@ foreach($Items as $item)	{
 			if($i%3==0):?> 			
 			<div class="wrapper" style="clear:both;"></div>
 			<?endif;?>
-			<div class="wrapper">
+			<div class="wrapper col-md-4">
 			<div class="product" id="<?=$item["id"]?>" style="display:<?=$block112?>">
 			<div class="product_image">					
 				<a href="/<?=$item["category_url"]?>/<?=$item["product_url"]?>"><div class="scaleimg"><image class="retro56" src="/uploads/<?=$item["image_url"]?>" /><div class="zatemnenka"></div></div></a>
