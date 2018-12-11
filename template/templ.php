@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Безупречное качество по суперцене. Гарантия 18 месяцев! Оплата на месте!
+    Никто не даст товар хуже чем вы ожидали!"/>
 	<link rel="stylesheet" href="../public/css/special/reset.css" />
 	<link rel="stylesheet" href="../public/css/style.css" />
 	<link rel="stylesheet" href="../public/css/Menu.css" />
@@ -14,4 +16,5 @@
 	<script type="text/javascript" src="https://vk.com/js/api/openapi.js?159"></script>
     <script type="text/javascript"> VK.init({apiId: 6760172, onlyWidgets: true});
     </script>
+   
 </head>
