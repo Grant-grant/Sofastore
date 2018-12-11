@@ -58,6 +58,24 @@
 			"order_content"=>$order_content,
 		);
 		
+		$to_user  = $this->email; 
+		$to_admin = 'grand-sofa@mail.ru';
+		$subject = 'Сообщение о покупки grandsofa.ru';
+		$message = "<b>ФИО: </b>".$this->fio."</br>";
+		$message .= "<b>e-mail: </b>".$this->email."</br>";
+		$message .= "<b>Телефон: </b>".$this->phone."</br>";
+		$message .= "<b>Адрес: </b>".$this->adres."</br>";
+		$message .= "<b>Дата: </b>".date( "d.m.y H:i" )."</br>";
+		$message .= "<b>Сумма: </b>".$summ."</br>";
+		$message .= "<b>Заказ: </b>".$order_content."</br>";
+		
+		$headers  = 'MIME-Version: 1.0'."\r\n";
+		$headers .= 'Content-type: text/html; charset=utf-8'."\r\n";
+		$headers .= 'From: grandsofa.ru'.$this->$array["phone"]."\r\n";		
+		$sarray=array("fio"=>$this->fio, "email"=>$this->email,	"phone"=>$this->$array["phone"], "message"=>$this->message,);		
+		
+		mail($to_admin, $subject, $message, $headers);	
+			
 		parent::build_query("INSERT INTO `order` SET",$array);
 		$id=parent::insert_id();		
 		if($id) $cart->clearCart();
