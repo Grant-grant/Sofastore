@@ -70,16 +70,16 @@
 			{
 				$bgcolor="#fefefe";
 				$table_cart.="<tr bgcolor=$bgcolor style='border-bottom: 1px solid #ccc;'>";				
-				$table_cart.="<td><img class='minibuyimg' src='../uploads/".$product['image_url']."'></td>";
-				$table_cart.="<td>".$product['name']."</td>";
-				$table_cart.="<td>".$product['price']." $ </td>";
-				$table_cart.="<td><input style='text-align: center; border: 1px solid grey;' type='text' style='text-align:center' size=3 name='item_".$product['id']."' value='".$_SESSION['cart'][$product['id']]."' /></td>";
-				$table_cart.="<td>".$_SESSION['cart'][$product['id']]*$product['price']." $. </td>";
-				$table_cart.="<td>"."<input TYPE='radio' style='border: 1px; outline:none; background: transparent;' name='del_".$product['id']."'></td>";
+				$table_cart.="<td class='col-md-3'><img class='minibuyimg' src='../uploads/".$product['image_url']."'></td>";
+				$table_cart.="<td class='col-md-3'>".$product['name']."</td>";
+				$table_cart.="<td class='col-md-2'>".$product['price']." руб. </td>";
+				$table_cart.="<td class='col-md-2'><input style='text-align: center; border: 1px solid grey;' type='text' style='text-align:center' size=3 name='item_".$product['id']."' value='".$_SESSION['cart'][$product['id']]."' /></td>";
+				$table_cart.="<td class='col-md-2'>".$_SESSION['cart'][$product['id']]*$product['price']." руб. </td>";
+				$table_cart.='<td class="col-md-2">'.'<form action="/cart" method="post"><?=$big_cart;?><input TYPE="radio" style="display: none; " name="del_'.$product['id'].'" checked><input type="submit" class="delprod" name="refresh" value="X"  /></form></td>';
 				$table_cart.="</tr>";	
 				$total_summ+=$_SESSION['cart'][$product['id']]*$product['price'];	
 			}
-			$table_cart.="<tr><td colspan='3'></td><td>К оплате: </td><td><strong> <span style='color: #7F0037'>".$total_summ." $ </span></strong></td><td></td></tr></table>";
+			$table_cart.="<tr><td colspan='3'></td><td>К оплате: </td><td><strong> <span style='color: #7F0037'>".$total_summ." руб. </span></strong></td><td></td></tr></table>";
 		return $table_cart;
 	}	  
 } 
