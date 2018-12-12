@@ -29,7 +29,7 @@ $tree = getTree($cat);
 
 function tplMenu($category){
 	$menu = '<li>
-		<a href="'. $category['url'] .'" title="'. $category['title'] .'">'.$category['title'].'</a>';
+		<a href="/'. $category['url'] .'" title="'. $category['title'] .'">'.$category['title'].'</a>';
 		if(isset($category['childs'])){
 			$menu .= '<ul>'.showCat($category['childs']).'</ul>';
 		}
