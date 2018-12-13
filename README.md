@@ -1,6 +1,6 @@
-<img src="MVPgrand.png" />
-# GRAND SOFA Sofastore
 
+# GRAND SOFA Sofastore
+<img src="MVPgrand.png" />
 <b>Требования</b></br>
 Работает с PHP версии 7
 
