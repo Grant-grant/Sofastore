@@ -2,15 +2,87 @@
 
 <div class="wrapper">
 <?php require 'marketingView.php';?>	
-	<section class="wrapper">
+	<section class="center wrapper">
 		<div class="row">
-			<div class="blockb"><img src="public/images/labelhot/sofa5.png" alt="slide2"/><h2 class="blockv descr">Популярная категория<br><span><a href='/Sofa'>Диваны</a></span></h2></div>
-			<div class="blockb"><img src="public/images/labelhot/closet5.png" alt="slide2"/><h2 class="blockv descr">Популярная категория<br><span><a href='/Closet'>Шкафы</a></span></h2></div>
+<?php
+$mysqli = mysqli_connect(HOST, USER, PASSWORD, NAME_BD);
+function getCat2($mysqli){
+	$sql = 'SELECT * FROM `category` where `title` like "Д%"';
+	$res = $mysqli->query($sql);
+	$cat = array();
+	while($row = $res->fetch_assoc()){
+		$cat[$row['id']] = $row;
+	}
+	return $cat;
+}
+function getTree2($dataset) {
+	$tree = array();
+	foreach ($dataset as $id => &$node) {    
+		if (!$node['parent']){
+			$tree[$id] = &$node;
+		}else{ 
+            $dataset[$node['parent']]['childs'][$id] = &$node;
+		}
+	}
+	return $tree;
+}
+$cat  = getCat2($mysqli); 
+$tree = getTree2($cat);
+function tplMenu2($category){
+	$menu = '<div class="blockb"><a href="/'. $category['url'] .'" title="'. $category['title'] .'"><img src="public/images/labelhot/pop-cat.png" alt="slide2" class="label-home" /><h2 class="blockv descr">Популярная категория<br><span>'.$category['title'].'</span></h2></a></div>';	
+	return $menu;
+}
+function showCat2($data){
+	$string = '';
+	foreach($data as $item){
+		$string .= tplMenu2($item);
+	}
+	return $string;
+}
+$cat_menu2 = showCat2($tree);
+echo '<nav class="wrapper"><ul>'. $cat_menu2 .'</ul></nav>';
+?>	
 		</div>
-		<div class="row">
-			<div class="blockb"><img src="public/images/labelhot/manhettenbrown.png" alt="slide2"/><h2 class="blockv descr">Популярный товар<br><span><a href='/uglovyie-d/divan_uglovoy_manhetten_Textile_Brown'>Диван угловой Манхэттен Textile Brown</a></span></h2></div>
-			<div class="blockb"><img src="public/images/labelhot/plidigrafit.png" alt="slide2"/><h2 class="blockv descr">Популярный товар<br><span><a href='/pryamyie/plidigrafit'>Диван Плиди Grafit</a></span></h2></div>
-		</div>
+<div class="row">
+<?php
+$mysqli = mysqli_connect(HOST, USER, PASSWORD, NAME_BD);
+function getproduct3($mysqli){
+	$sql = 'SELECT * FROM `product` where `name` like "Д%" limit 0,2';
+	$res = $mysqli->query($sql);
+	$product = array();
+	while($row = $res->fetch_assoc()){
+		$product[$row['id']] = $row;
+	}
+	return $product;
+}
+function getTree3($dataset) {
+	$tree = array();
+	foreach ($dataset as $id => &$node) {    
+		if (!$node['parent']){
+			$tree[$id] = &$node;
+		}else{ 
+            $dataset[$node['parent']]['childs'][$id] = &$node;
+		}
+	}
+	return $tree;
+}
+$product  = getproduct3($mysqli); 
+$tree = getTree3($product);
+function tplMenu3($productegory){
+	$menu = '<div class="blockb"><a href="/pryamyie/'.$productegory['url'] .'" title="'. $productegory['name'] .'"><img src="public/images/labelhot/pop-prod.png" alt="slide2" class="label-home" /><h2 class="blockv descr">Популярный товар<br><span>'.$productegory['name'].'</span></h2></a></div>';	
+	return $menu;
+}
+function showproduct3($data){
+	$string = '';
+	foreach($data as $item){
+		$string .= tplMenu3($item);
+	}
+	return $string;
+}
+$product_menu3 = showproduct3($tree);
+echo '<nav class="wrapper"><ul>'. $product_menu3 .'</ul></nav>';
+?>	
+</div>
 	</section>	
 <?php require 'sliderView.php';?>			
 </div>
