@@ -1,3 +1,4 @@
+<img src="https://yadi.sk/i/-AkCR8hf2BWozw" />
 # GRAND SOFA Sofastore
 
 <b>Требования</b></br>
