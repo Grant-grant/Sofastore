@@ -1,4 +1,4 @@
-<img src="https://yadi.sk/i/-AkCR8hf2BWozw" />
+<img src="MVPgrand.png" />
 # GRAND SOFA Sofastore
 
 <b>Требования</b></br>
